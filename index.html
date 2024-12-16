@@ -22,9 +22,10 @@
         }
     </style>
 </head>
-<body>
+<body >
     <h1>Welcome to my DOM</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est voluptate repellat iusto, ipsa laudantium aliquid magnam laborum nisi a asperiores corrupti? Aperiam ex natus ipsum suscipit deserunt eligendi aliquid laboriosam.</p>
+    <main id="main-container">
     <section>
         <ul>
             <li>Jalali Set</li>
@@ -40,15 +41,18 @@
             <li>Banana</li>
         </ul>
     </section>
-    <section>
+    <section id="places-container" class="large-size">
         <h1 id="places-title">Places I like to visit</h1>
-        <ul>
+        <ul id="places-list">
             <li class="important-places">Shundarban</li>
             <li class="important-places">Bandarban</li>
             <li class="important-places">CoxsBazar</li>
         </ul>
     </section>
+    </main>
     <script src="js/dom.js"></script>
+    <script src="js/style.js"></script>
+    <script src="js/append.js"></script>
     <script>
         const student ={
             name : 'Abdullah',

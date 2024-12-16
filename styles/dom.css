@@ -1,3 +1,23 @@
 h1{
     color: lightcoral;
 }
+
+.yellow-bg{
+    background-color: yellowgreen;
+}
+
+
+.large-size{
+    font-size: 2em;
+}
+.text-center{
+    text-align: center;
+
+
+}
+#main-container{
+    text-align: center;
+}
+#main-container ul li{
+list-style: none;
+}
