@@ -6,22 +6,90 @@
     <title>Tour Of DOM</title>
     <link rel="stylesheet" href="styles/dom.css">
     <style>
+        .fruits-container li {
+            color: tomato;
+
+        }
         li{
             color:blueviolet;
             list-style: number;
+        }
+        #fruits-title{
+            color: black;
+        }
+        .important-places{
+            color: red;
         }
     </style>
 </head>
 <body>
     <h1>Welcome to my DOM</h1>
-    <ul>
-        <li>Jalali Set</li>
-        <li>Shafayet</li>
-        <li>Bonobash</li>
-    </ul>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est voluptate repellat iusto, ipsa laudantium aliquid magnam laborum nisi a asperiores corrupti? Aperiam ex natus ipsum suscipit deserunt eligendi aliquid laboriosam.</p>
+    <section>
+        <ul>
+            <li>Jalali Set</li>
+            <li>Shafayet</li>
+            <li>Bonobash</li>
+        </ul>
+    </section>
+    <section class="fruits-container">
+        <h1 id="fruits-title">Fruits I like</h1>
+        <ul>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Banana</li>
+        </ul>
+    </section>
+    <section>
+        <h1 id="places-title">Places I like to visit</h1>
+        <ul>
+            <li class="important-places">Shundarban</li>
+            <li class="important-places">Bandarban</li>
+            <li class="important-places">CoxsBazar</li>
+        </ul>
+    </section>
     <script src="js/dom.js"></script>
     <script>
+        const student ={
+            name : 'Abdullah',
+            Id : 11,
+            study :function(time){
+                console.log(time,'Study kortese');
+            }
+        }
         console.log('adding js inside the HTML file');
+        
+        // option-1:getElementsByTagName
+        const liCollection = document.getElementsByTagName('li');
+        console.log(liCollection);
+
+        for(const li of liCollection){
+            console.log(li);
+        }
+
+        // Option-1:getElementsByTagName
+        const allHeading =document.getElementsByTagName ('h1');
+        {
+            console.log(allHeading);
+        }
+
+        // Option-2:getElementById
+        const fruitsTitle =document.getElementById('fruits-title');
+        fruitsTitle.innerText= 'Fruits Change By JS'
+
+        // Option-3:getElementsByClassName
+        const places =document.
+        getElementsByClassName('important-places');
+        for(const place of places){
+            console.log(place.innerText);
+        }
+        // querySelector [will returns single node]
+        // querySelectorAll [will returns all nodes]
+        const someLi = document.querySelectorAll('.fruits-container li');
+        console.log(someLi);
+        for (const li of someLi){
+            console.log(li.innerText);
+        }
     </script>
 </body>
 </html>
